@@ -12,28 +12,62 @@ function getComputerChoice (){
             break;  
     };
 }
-let playerSelection 
+
+
+
+let playerSelection=prompt("enter Rock, Paper, or Scissors")
 let computerSelection
 computerSelection = getComputerChoice();
 
 
 function playRound (playerSelection, computerSelection) {
 
-if (playerSelection==="rock"&&computerSelection ==="rock") {
+if (playerSelection.toLowerCase()==="rock"&&computerSelection ==="rock") {
    return declaration="Tie Game!"
 }
 
-if (playerSelection==="rock"&&computerSelection==="scissors") {
+if (playerSelection.toLowerCase()==="rock"&&computerSelection==="scissors") {
    return declaration="You Win!"
 }
 
-if (playerSelection==="rock"&&computerSelection==="paper") {
+if (playerSelection.toLowerCase()==="rock"&&computerSelection==="paper") {
    return declaration="You Lose!"
 }
 
+if (playerSelection.toLowerCase()==="scissors"&&computerSelection==="paper") {
+    return declaration="You Win!"
+ }
+ 
+ if (playerSelection.toLowerCase()==="scissors"&&computerSelection==="scissors") {
+    return declaration="Tie Game!"
+ }
+
+ if (playerSelection.toLowerCase()==="scissors"&&computerSelection==="rock") {
+    return declaration="You Lose!"
+ }
+
+ if (playerSelection.toLowerCase()==="paper"&&computerSelection==="paper") {
+    return declaration="Tie Game!"
+ }
+
+ if (playerSelection.toLowerCase()==="paper"&&computerSelection==="scissors") {
+    return declaration="You Lose!"
+ }
+ 
+ if (playerSelection.toLowerCase()==="paper"&&computerSelection==="rock") {
+    return declaration="You Win!"
+ }
+ 
+ 
+ 
+ 
 
 
-     playerSelection = "rock"
+
+     
+     
     console.log(playRound(playerSelection,computerSelection));
 
 }
+
+    
