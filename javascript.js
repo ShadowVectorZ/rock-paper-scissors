@@ -12,5 +12,28 @@ function getComputerChoice (){
             break;  
     };
 }
+let playerSelection 
+let computerSelection
+computerSelection = getComputerChoice();
 
-console.log(getComputerChoice());
+
+function playRound (playerSelection, computerSelection) {
+
+if (playerSelection==="rock"&&computerSelection ==="rock") {
+   return declaration="Tie Game!"
+}
+
+if (playerSelection==="rock"&&computerSelection==="scissors") {
+   return declaration="You Win!"
+}
+
+if (playerSelection==="rock"&&computerSelection==="paper") {
+   return declaration="You Lose!"
+}
+
+
+
+     playerSelection = "rock"
+    console.log(playRound(playerSelection,computerSelection));
+
+}
