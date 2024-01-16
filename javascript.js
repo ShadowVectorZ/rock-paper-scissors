@@ -13,8 +13,10 @@ let getComputerChoice = function(){
 
 }
 
-
+let computerScore=0
+let playerScore=0
 let game =function(){
+   
 
 let singleRound = function(){
    let playerSelection = prompt("Choose your Weapon")
@@ -26,24 +28,31 @@ let singleRound = function(){
 
 
    if (computerSelection===playerSelection.toLowerCase()) {
-      return "Tie Game"
+      alert ("Tie Game, play again")
+      singleRound()
    
    }
 
    else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="paper") {
+      playerScore+=1
       return "Player wins!"
    }
 
 
    else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="scissors") {
+      playerScore+=1
       return "Player wins!"
    }
 
    else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="rock") {
+      playerScore+=1
       return "Player wins!"
    }
 
-   else return "Computer Wins!"
+   else {
+      computerScore+=1
+      return "Computer Wins!"
+   }
 
 }
 
@@ -52,5 +61,10 @@ console.log(singleRound())
 console.log(singleRound())
 console.log(singleRound())
 console.log(singleRound())
+
+if (playerScore>computerScore)
+return (`Player has ${playerScore} points! Computer has ${computerScore} points! Player Wins!` )
+
+else return (`Player has ${playerScore} points! Computer has ${computerScore} points! Computer Wins!` )
 
 }
