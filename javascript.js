@@ -13,17 +13,14 @@ let getComputerChoice = function(){
 
 }
 
-let computerScore=0
-let playerScore=0
+
 let game =function(){
-   
+     let computerScore=0
+let playerScore=0 
 
 let singleRound = function(){
-   let playerSelection = prompt("Choose your Weapon")
-   if(playerSelection.toLowerCase==="rock"||playerSelection.toLowerCase==="scissors"||playerSelection.toLowerCase==="paper"){
-      
-   }
-   
+
+   let playerSelection = prompt("Choose your Weapon")  
    let computerSelection = getComputerChoice()
 
 
@@ -49,9 +46,24 @@ let singleRound = function(){
       return "Player wins!"
    }
 
-   else {
+  else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="scissors") {
       computerScore+=1
-      return "Computer Wins!"
+      return "Computer wins!"
+  }
+
+  else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="rock") {
+      computerScore+=1
+      return "Computer wins!"
+  }
+
+
+  else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="paper") {
+      computerScore+=1
+      return "Computer wins!"
+  }
+   else {
+      alert("please choose rock, paper, or scissors")
+      singleRound()
    }
 
 }
