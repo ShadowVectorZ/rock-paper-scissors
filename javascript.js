@@ -34,32 +34,32 @@ let singleRound = function(){
    else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="paper") {
       playerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent="Player Wins!"
+      results.textContent="Paper beats Rock! Player Wins!"
    }
    else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="scissors") {
       playerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent="Player Wins!"
+      results.textContent="Scissors beats Paper! Player Wins!"
    }
    else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="rock") {
       playerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent="Player Wins!"
+      results.textContent="Rock beats Scissors! Player Wins!"
    }
   else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="scissors") {
       computerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent= "Computer wins!"
+      results.textContent= "Rock beats Scissors! Computer wins!"
   }
   else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="rock") {
       computerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent= "Computer wins!"
+      results.textContent= "Paper beats Rock! Computer wins!"
   }
   else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="paper") {
       computerScore+=1
       score.textContent=`Player Score: ${playerScore}. Computer Score: ${computerScore}`
-      results.textContent= "Computer wins!"
+      results.textContent= "Scissors beats Paper! Computer wins!"
   }
  
   if (playerScore==5){
