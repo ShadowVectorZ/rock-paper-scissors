@@ -27,8 +27,7 @@ let singleRound = function(){
 
 
    if (computerSelection===playerSelection.toLowerCase()) {
-      alert ("Tie Game, play again")
-      singleRound()
+      results.textContent="Tie Game"
    }
    else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="paper") {
       playerScore+=1
@@ -36,23 +35,23 @@ let singleRound = function(){
    }
    else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="scissors") {
       playerScore+=1
-      return "Player wins!"
+      results.textContent="Player Wins!"
    }
    else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="rock") {
       playerScore+=1
-      return "Player wins!"
+      results.textContent="Player Wins!"
    }
   else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="scissors") {
       computerScore+=1
-      return "Computer wins!"
+      results.textContent= "Computer wins!"
   }
   else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="rock") {
       computerScore+=1
-      return "Computer wins!"
+      results.textContent= "Computer wins!"
   }
   else if (computerSelection=="scissors"&&playerSelection.toLowerCase()=="paper") {
       computerScore+=1
-      return "Computer wins!"
+      results.textContent= "Computer wins!"
   }
    else {
       alert("please choose rock, paper, or scissors")
