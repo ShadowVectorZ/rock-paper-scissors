@@ -17,10 +17,12 @@ let getComputerChoice = function(){
 
      let computerScore=0
 let playerScore=0 
+const results =document.querySelector('#results')
 
+let playerSelection
 let singleRound = function(){
 
-   let playerSelection = prompt("Choose your Weapon")  
+    
    let computerSelection = getComputerChoice()
 
 
@@ -30,7 +32,7 @@ let singleRound = function(){
    }
    else if (computerSelection=="rock"&&playerSelection.toLowerCase()=="paper") {
       playerScore+=1
-      return "Player wins!"
+      results.textContent="Player Wins!"
    }
    else if (computerSelection=="paper"&&playerSelection.toLowerCase()=="scissors") {
       playerScore+=1
@@ -59,9 +61,13 @@ let singleRound = function(){
 
 }
 let game =function(){
-for (let i=0;i<5;i++){
+/*for (let i=0;i<5;i++){
    singleRound()
 }
+*/
+
+
+
 
 if (playerScore>computerScore)
 return (`Player has ${playerScore} points! Computer has ${computerScore} points! Player Wins!` )
@@ -69,3 +75,12 @@ return (`Player has ${playerScore} points! Computer has ${computerScore} points!
 else return (`Player has ${playerScore} points! Computer has ${computerScore} points! Computer Wins!` )
 
 }
+
+let buttons=document.querySelector('#buttons')
+
+buttons.addEventListener('click',(event)=>{
+   if (event.target.tagName==='BUTTON'){
+      playerSelection=event.target.innerText
+      singleRound()
+   }
+})
